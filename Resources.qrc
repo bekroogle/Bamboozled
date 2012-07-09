@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/images">
+        <file>pen.png</file>
+        <file>tablet.svg</file>
+        <file>display.svg</file>
+    </qresource>
+</RCC>
