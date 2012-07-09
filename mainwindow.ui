@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>698</width>
-    <height>481</height>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="penTab">
        <attribute name="title">
@@ -107,7 +107,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QSlider" name="horizontalSlider">
+       <widget class="QSlider" name="tipSensSlider">
         <property name="geometry">
          <rect>
           <x>159</x>
@@ -152,7 +152,7 @@
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QSlider" name="horizontalSlider_2">
+       <widget class="QSlider" name="eraserSensSlider">
         <property name="geometry">
          <rect>
           <x>170</x>
@@ -163,6 +163,32 @@
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="eraserSensLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>60</y>
+          <width>51</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0 %</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="tipSensLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>232</x>
+          <y>350</y>
+          <width>51</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0 %</string>
         </property>
        </widget>
       </widget>

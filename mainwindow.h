@@ -16,6 +16,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     
+private slots:
+    void on_eraserSensSlider_valueChanged(int position);
+
+    void on_tipSensSlider_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
 };

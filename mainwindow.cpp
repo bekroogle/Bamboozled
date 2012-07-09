@@ -27,3 +27,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_eraserSensSlider_valueChanged(int position)
+{
+    ui->eraserSensLineEdit->setText(QString(QString::number(ui->eraserSensSlider->value())) + " %");
+}
+
+void MainWindow::on_tipSensSlider_valueChanged(int value)
+{
+    ui->tipSensLineEdit->setText(QString(QString::number(ui->tipSensSlider->value())) + " %");
+}
