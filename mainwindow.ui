@@ -30,7 +30,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="penTab">
        <attribute name="title">
@@ -282,6 +282,16 @@
         <string>Applications</string>
        </attribute>
       </widget>
+      <widget class="QWidget" name="scriptTab">
+       <attribute name="title">
+        <string>Script Editor</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -306,7 +316,27 @@
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionCopy_2"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionClear"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -340,6 +370,41 @@
   <action name="action_Quit">
    <property name="text">
     <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionCopy_2">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
    </property>
   </action>
  </widget>
