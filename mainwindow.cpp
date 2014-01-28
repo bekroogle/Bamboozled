@@ -1,13 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QString>
+#include <QtGui>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     QProcess p;
 
     p.start("xsetwacom --get \"Wacom Bamboo 2FG 6x8 Finger touch\" Touch");
@@ -20,7 +21,15 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->checkBox->setChecked(true);
     }
     qDebug() << results[1];
-
+    p.start("xsetwacom  --get \"Wacom Bamboo 2FG 6x8 Pen stylus\" mode");
+    p.waitForFinished(-1);
+    results = QString(p.readAll());
+    qDebug() << results[0];
+    if (results[0] == 'A') {
+        ui->modeComboBox->setCurrentIndex(0);
+    } else if (results[0] == 'R') {
+        ui->modeComboBox->setCurrentIndex(0);
+    }
 }
 
 MainWindow::~MainWindow()
