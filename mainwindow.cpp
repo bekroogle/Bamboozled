@@ -37,3 +37,18 @@ void MainWindow::on_tipSensSlider_valueChanged(int value)
 {
     ui->tipSensLineEdit->setText(QString(QString::number(ui->tipSensSlider->value())) + " %");
 }
+
+void MainWindow::on_checkBox_released()
+{
+    QProcess p;
+
+    // If touch is selected.
+    if (ui->checkBox->isChecked()) {
+        p.start("xsetwacom --set \"Wacom Bamboo 2FG 6x8 Finger touch\" touch on");
+        p.waitForFinished(-1);
+    // else, touch is not selected.
+    } else {
+        p.start("xsetwacom --set \"Wacom Bamboo 2FG 6x8 Finger touch\" touch off");
+        p.waitForFinished(-1);
+    }
+}

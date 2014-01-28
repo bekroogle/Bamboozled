@@ -21,6 +21,8 @@ private slots:
 
     void on_tipSensSlider_valueChanged(int value);
 
+    void on_checkBox_released();
+
 private:
     Ui::MainWindow *ui;
 };
