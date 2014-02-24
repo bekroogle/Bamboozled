@@ -3,5 +3,6 @@
         <file>pen.png</file>
         <file>tablet.svg</file>
         <file>display.svg</file>
+        <file>dual-display.svg</file>
     </qresource>
 </RCC>
